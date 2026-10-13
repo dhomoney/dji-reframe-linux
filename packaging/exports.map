@@ -1,0 +1,11 @@
+/* Only the OFX C entry points leave the plugin. Everything else -- including
+ * the statically linked libstdc++ -- stays local, so the plugin cannot clash
+ * with the C++ runtime Resolve loads for itself. */
+{
+    global:
+        OfxGetNumberOfPlugins;
+        OfxGetPlugin;
+        OfxSetHost;
+    local:
+        *;
+};

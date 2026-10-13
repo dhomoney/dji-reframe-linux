@@ -1,9 +1,6 @@
 # Build output
 build/
 
-# OpenFX SDK — fetched by the user, see README §2
-vendor/
-
 # DJI's proprietary installer. Not redistributable; supply your own
 # lawfully obtained copy to reproduce the analysis (README §12).
 DJI_Reframe_for_DaVinci_Resolve.exe
@@ -11,7 +8,6 @@ DJI_Reframe_for_DaVinci_Resolve.exe
 
 # Reverse-engineering scratch
 *.rea
-snap.rea
 extracted/
 
 # Editor / OS
@@ -20,3 +16,6 @@ extracted/
 *.swp
 *~
 .DS_Store
+
+# Portable build output (tools/build-portable.sh)
+dist/

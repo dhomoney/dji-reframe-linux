@@ -5,7 +5,8 @@ reconstructs it for Linux from the shipped Windows binary, so 360 / ultra-wide
 DJI footage can be reframed in DaVinci Resolve on Linux.
 
 **Status:** working. CPU rendering, all five projections, both render paths, all
-18 geometry checks passing.
+18 geometry checks passing. Prebuilt bundles are portable across distros
+(glibc 2.17 baseline, static C++ runtime).
 
 - [1. Requirements](#1-requirements)
 - [2. Build](#2-build)
@@ -20,6 +21,7 @@ DJI footage can be reframed in DaVinci Resolve on Linux.
 - [11. Troubleshooting](#11-troubleshooting)
 - [12. Reproducing the analysis](#12-reproducing-the-analysis)
 - [13. Legal](#13-legal)
+- [14. Licence](#14-licence)
 
 ---
 
@@ -28,17 +30,39 @@ DJI footage can be reframed in DaVinci Resolve on Linux.
 | | |
 |---|---|
 | **DaVinci Resolve Studio** | Required. The free edition does not load third-party OFX plugins. Developed against Studio 21.1. |
-| C++17 compiler | GCC 12+ or Clang 15+ (built with GCC 16.2.1) |
+| C++17 compiler | GCC 10+ or Clang 15+ (developed with GCC 16.2.1, release builds use GCC 10.2.1) |
 | CMake | 3.16+ |
-| OpenFX SDK | Fetched into `vendor/openfx` (BSD-3-Clause), v1.5.1 |
+| OpenFX SDK | Git submodule at `vendor/openfx` (BSD-3-Clause), API v1.5.1 |
+| Docker | Only for building the portable release artifact ([§2.3](#23-portable-build)) |
 
 No GPU runtime is required — rendering is CPU-side. See
 [§10](#10-differences-from-the-windows-plugin) for what that costs you.
 
+If you just want the plugin and not the source, grab the prebuilt bundle from
+the [latest release](https://github.com/dhomoney/dji-reframe-linux/releases/latest)
+and skip to [§3](#3-install). It is built against glibc 2.17 with a static C++
+runtime, so it loads on any distro Resolve itself supports.
+
 ## 2. Build
 
+### 2.1 Clone
+
+The OpenFX SDK is a submodule, so clone recursively:
+
 ```sh
-git clone --depth 1 https://github.com/AcademySoftwareFoundation/openfx.git vendor/openfx
+git clone --recurse-submodules https://github.com/dhomoney/dji-reframe-linux.git
+cd dji-reframe-linux
+```
+
+Already cloned without it?
+
+```sh
+git submodule update --init --depth 1
+```
+
+### 2.2 Build
+
+```sh
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j"$(nproc)"
 ```
@@ -53,7 +77,62 @@ DJIReframe.ofx.bundle/
       DJIReframe.ofx          # the plugin (an .so with OFX entry points)
 ```
 
+This bundle is fine for your own machine. It is **not** portable to other
+distros — see below.
+
+### 2.3 Portable build
+
+A plugin is `dlopen`'d straight into Resolve's process, which makes it fussier
+than an ordinary binary. Two things break portability:
+
+| Problem | Why it bites | Fix |
+|---|---|---|
+| **glibc version** | Building on a rolling-release distro records symbol versions like `GLIBC_2.43`. glibc is backward compatible but not forward compatible, so an older host cannot load the plugin at all. | Build against an old glibc — the release uses the `manylinux2014` image (glibc 2.17). |
+| **libstdc++** | Resolve ships its own C++ runtime. A plugin that links `libstdc++` dynamically and exports 1000+ C++ symbols can bind against the wrong one. | `-static-libstdc++ -static-libgcc`, hidden visibility, and a linker version script exporting only the two OFX entry points. |
+
+The second fix is the `OFX_PORTABLE` CMake option, **on by default**:
+
+```sh
+cmake -S . -B build -DOFX_PORTABLE=OFF    # if you want the small, local-only build
+```
+
+| | `OFX_PORTABLE=ON` | `OFF` |
+|---|---|---|
+| Exported symbols | 2 | 1072 |
+| Links `libstdc++` | no (static) | yes |
+| Size | ~1.9 MB | ~530 KB |
+
+For the full portable artifact, including the old-glibc container build:
+
+```sh
+tools/build-portable.sh
+```
+
+That builds in Docker, runs the geometry checks with the same toolchain, then
+verifies the result before packaging it:
+
+```
+    glibc required:   2.15 (baseline 2.17) OK
+    libstdc++:        static OK
+    shared deps:      libpthread.so.0 libm.so.6 libc.so.6 ld-linux-x86-64.so.2
+    exported symbols: OfxGetNumberOfPlugins OfxGetPlugin  OK
+    bundle layout:    OK
+```
+
+Output lands in `dist/`, as both an unpacked bundle and a tarball. To re-check
+an existing build without rebuilding: `tools/build-portable.sh --verify`.
+
 ## 3. Install
+
+### From a release tarball
+
+```sh
+tar xzf DJIReframe-linux-x86_64.ofx.bundle.tar.gz
+mkdir -p ~/OFX/Plugins
+cp -r DJIReframe.ofx.bundle ~/OFX/Plugins/
+```
+
+### From source
 
 System-wide (Resolve scans `/usr/OFX/Plugins` — confirmed by strings in
 `/opt/resolve/bin/resolve`):
@@ -565,6 +644,22 @@ ldd build/DJIReframe.ofx.bundle/Contents/Linux-x86-64/DJIReframe.ofx
 # expect no "not found"
 ```
 
+**Built it myself and Resolve still will not load it.** Most likely a glibc
+mismatch: a plugin built on a newer distro than Resolve's own runtime cannot be
+loaded. Check what the plugin demands against what you have:
+
+```sh
+objdump -T build/DJIReframe.ofx.bundle/Contents/Linux-x86-64/DJIReframe.ofx \
+    | grep -oE 'GLIBC_[0-9.]+' | sort -uV | tail -1
+ldd --version | head -1
+```
+
+If the first number is higher than the second, build the portable artifact with
+`tools/build-portable.sh` ([§2.3](#23-portable-build)) or use the release
+tarball. Resolve's bundled libraries in `/opt/resolve/libs` can also shadow
+system ones; launching Resolve after moving that directory aside is a quick way
+to confirm whether a conflict there is the cause.
+
 **Output is black or transparent.** Check Border Mode, and confirm the source is
 actually equirectangular. A non-360 clip will map to something unrecognisable
 rather than failing outright.
@@ -624,6 +719,27 @@ distributed as part of the plugin.
 The OpenFX SDK in `vendor/openfx` is BSD-3-Clause, © The Open Effects
 Association.
 
+Note that `notes/` contains material extracted verbatim from DJI's binary and
+is therefore **not** covered by this project's MIT licence. See
+[§14](#14-licence) and [LICENSES.md](LICENSES.md) for the breakdown.
+
 "DJI" is a trademark of SZ DJI Technology Co., Ltd. This project is not
 affiliated with, authorised by, or endorsed by DJI. You need a lawfully obtained
 copy of the original plugin for the preset-extraction tooling to be meaningful.
+
+## 14. Licence
+
+This project's own work — `src/`, `tests/`, `tools/`, `packaging/`, the build
+files and this README — is **MIT licensed**. See [LICENSE](LICENSE).
+
+Three different sets of terms apply across the repository, so
+[LICENSES.md](LICENSES.md) spells out which is which. In short:
+
+| Path | Terms |
+|---|---|
+| `src/`, `tests/`, `tools/`, `packaging/`, `CMakeLists.txt`, `README.md` | MIT, © 2026 David Homoney |
+| `vendor/openfx` (submodule) | BSD-3-Clause, © The Open Effects Association |
+| `notes/` | Recovered from DJI's binary. Not this project's to license — retained as interoperability analysis evidence, never compiled. |
+
+Distributed binaries link the OpenFX support library, so they carry the
+BSD-3-Clause notice.

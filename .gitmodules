@@ -1,0 +1,4 @@
+[submodule "vendor/openfx"]
+	path = vendor/openfx
+	url = https://github.com/AcademySoftwareFoundation/openfx.git
+	shallow = true

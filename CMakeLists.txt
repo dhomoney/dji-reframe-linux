@@ -12,7 +12,8 @@ set(OFX_ROOT "${CMAKE_SOURCE_DIR}/vendor/openfx")
 if(NOT EXISTS "${OFX_ROOT}/include/ofxImageEffect.h")
     message(FATAL_ERROR
         "OpenFX SDK not found at ${OFX_ROOT}.\n"
-        "Run: git clone --depth 1 https://github.com/AcademySoftwareFoundation/openfx.git vendor/openfx")
+        "The SDK is a git submodule. Run:\n"
+        "  git submodule update --init --depth 1")
 endif()
 
 file(GLOB OFX_SUPPORT_SRC "${OFX_ROOT}/Support/Library/*.cpp")
@@ -39,6 +40,33 @@ target_compile_options(DJIReframe PRIVATE -O3 -ffast-math -Wall -Wno-unused-para
 target_link_options(DJIReframe PRIVATE -Wl,--no-undefined)
 find_package(Threads REQUIRED)
 target_link_libraries(DJIReframe PRIVATE Threads::Threads)
+
+# ------------------------------------------------------------- portability
+# A plugin is dlopen'd into Resolve's process, so it must not depend on a
+# newer libstdc++ than the host has, and must not export symbols that could
+# collide with the C++ runtime Resolve loads for itself.
+#
+#   -DOFX_PORTABLE=ON   static libstdc++/libgcc + hidden visibility
+#
+# ON by default: the cost is a larger .ofx, the benefit is a plugin that
+# loads on distros other than the one it was built on. See tools/build-portable.sh
+# for building against an old glibc as well.
+option(OFX_PORTABLE "Statically link the C++ runtime and hide internal symbols" ON)
+
+if(OFX_PORTABLE)
+    set_target_properties(DJIReframe PROPERTIES
+        CXX_VISIBILITY_PRESET hidden
+        VISIBILITY_INLINES_HIDDEN ON
+    )
+    target_link_options(DJIReframe PRIVATE
+        -static-libstdc++
+        -static-libgcc
+        "-Wl,--version-script=${CMAKE_SOURCE_DIR}/packaging/exports.map"
+        -Wl,--exclude-libs,ALL
+    )
+    set_property(TARGET DJIReframe APPEND PROPERTY
+        LINK_DEPENDS "${CMAKE_SOURCE_DIR}/packaging/exports.map")
+endif()
 
 # ---------------------------------------------------------------- bundle
 # OFX expects DJIReframe.ofx.bundle/Contents/Linux-x86-64/DJIReframe.ofx
