@@ -1,0 +1,1239 @@
+180006f02:  call       0x18001bd00
+180006f07:  nop        
+180006f08:  lea        rcx,[rbp-0x30]
+180006f0c:  call       0x180003f10
+180006f11:  nop        
+180006f12:  mov        rdx,QWORD PTR [rsp+0x68]
+180006f17:  cmp        rdx,0x10
+180006f1b:  jb         0x180006f52
+180006f1d:  inc        rdx
+180006f20:  mov        rcx,QWORD PTR [rsp+0x50]
+180006f25:  mov        rax,rcx
+180006f28:  cmp        rdx,0x1000
+180006f2f:  jb         0x180006f4d
+180006f31:  add        rdx,0x27
+180006f35:  mov        rcx,QWORD PTR [rcx-0x8]
+180006f39:  sub        rax,rcx
+180006f3c:  add        rax,0xfffffffffffffff8
+180006f40:  cmp        rax,0x1f
+180006f44:  jbe        0x180006f4d
+180006f46:  call       QWORD PTR [rip+0x1b404]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180006f4c:  int3       
+180006f4d:  call       0x18001ed7c
+180006f52:  mov        QWORD PTR [rsp+0x60],r13
+180006f57:  mov        QWORD PTR [rsp+0x68],0xf
+180006f60:  mov        BYTE PTR [rsp+0x50],0x0
+180006f65:  mov        rdx,QWORD PTR [rbp-0x58]
+180006f69:  cmp        rdx,0x10
+180006f6d:  jb         0x180006fa3
+180006f6f:  inc        rdx
+180006f72:  mov        rcx,QWORD PTR [rbp-0x70]
+180006f76:  mov        rax,rcx
+180006f79:  cmp        rdx,0x1000
+180006f80:  jb         0x180006f9e
+180006f82:  add        rdx,0x27
+180006f86:  mov        rcx,QWORD PTR [rcx-0x8]
+180006f8a:  sub        rax,rcx
+180006f8d:  add        rax,0xfffffffffffffff8
+180006f91:  cmp        rax,0x1f
+180006f95:  jbe        0x180006f9e
+180006f97:  call       QWORD PTR [rip+0x1b3b3]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180006f9d:  int3       
+180006f9e:  call       0x18001ed7c
+180006fa3:  mov        QWORD PTR [rbp-0x70],r13
+180006fa7:  mov        QWORD PTR [rbp-0x60],r13
+180006fab:  mov        QWORD PTR [rbp-0x58],0xf
+180006fb3:  mov        BYTE PTR [rbp-0x70],0x0
+180006fb7:  mov        r8d,0xc
+180006fbd:  lea        rdx,[rip+0x1ccfc]        # 0x180023cc0   ; "CameraParams"
+180006fc4:  lea        rcx,[rbp-0x70]
+180006fc8:  call       0x180004cc0
+180006fcd:  nop        
+180006fce:  lea        rdx,[rbp-0x70]
+180006fd2:  mov        rcx,r14
+180006fd5:  call       0x18001c270
+180006fda:  mov        rsi,rax
+180006fdd:  mov        rdx,QWORD PTR [rbp-0x58]
+180006fe1:  cmp        rdx,0x10
+180006fe5:  jb         0x18000701b
+180006fe7:  inc        rdx
+180006fea:  mov        rcx,QWORD PTR [rbp-0x70]
+180006fee:  mov        rax,rcx
+180006ff1:  cmp        rdx,0x1000
+180006ff8:  jb         0x180007016
+180006ffa:  add        rdx,0x27
+180006ffe:  mov        rcx,QWORD PTR [rcx-0x8]
+180007002:  sub        rax,rcx
+180007005:  add        rax,0xfffffffffffffff8
+180007009:  cmp        rax,0x1f
+18000700d:  jbe        0x180007016
+18000700f:  call       QWORD PTR [rip+0x1b33b]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007015:  int3       
+180007016:  call       0x18001ed7c
+18000701b:  mov        QWORD PTR [rbp-0x60],r13
+18000701f:  mov        QWORD PTR [rbp-0x58],0xf
+180007027:  mov        BYTE PTR [rbp-0x70],0x0
+18000702b:  mov        QWORD PTR [rsp+0x70],r13
+180007030:  mov        QWORD PTR [rbp-0x80],r13
+180007034:  mov        QWORD PTR [rbp-0x78],0xf
+18000703c:  mov        BYTE PTR [rsp+0x70],0x0
+180007041:  mov        r8d,0x16
+180007047:  lea        rdx,[rip+0x1cc82]        # 0x180023cd0   ; "Main Camera Parameters"
+18000704e:  lea        rcx,[rsp+0x70]
+180007053:  call       0x180004cc0
+180007058:  nop        
+180007059:  lea        rdx,[rsp+0x70]
+18000705e:  mov        rcx,rsi
+180007061:  call       0x18001d6f0
+180007066:  nop        
+180007067:  mov        rdx,QWORD PTR [rbp-0x78]
+18000706b:  cmp        rdx,0x10
+18000706f:  jb         0x1800070a6
+180007071:  inc        rdx
+180007074:  mov        rcx,QWORD PTR [rsp+0x70]
+180007079:  mov        rax,rcx
+18000707c:  cmp        rdx,0x1000
+180007083:  jb         0x1800070a1
+180007085:  add        rdx,0x27
+180007089:  mov        rcx,QWORD PTR [rcx-0x8]
+18000708d:  sub        rax,rcx
+180007090:  add        rax,0xfffffffffffffff8
+180007094:  cmp        rax,0x1f
+180007098:  jbe        0x1800070a1
+18000709a:  call       QWORD PTR [rip+0x1b2b0]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+1800070a0:  int3       
+1800070a1:  call       0x18001ed7c
+1800070a6:  mov        QWORD PTR [rsp+0x50],r13
+1800070ab:  mov        QWORD PTR [rsp+0x60],r13
+1800070b0:  mov        QWORD PTR [rsp+0x68],0xf
+1800070b9:  mov        BYTE PTR [rsp+0x50],0x0
+1800070be:  mov        r8d,0x6
+1800070c4:  lea        rdx,[rip+0x1cc1d]        # 0x180023ce8   ; "Camera"
+1800070cb:  lea        rcx,[rsp+0x50]
+1800070d0:  call       0x180004cc0
+1800070d5:  nop        
+1800070d6:  mov        QWORD PTR [rsp+0x70],r13
+1800070db:  mov        QWORD PTR [rbp-0x80],r13
+1800070df:  mov        QWORD PTR [rbp-0x78],0xf
+1800070e7:  mov        BYTE PTR [rsp+0x70],0x0
+1800070ec:  mov        r8d,0x6
+1800070f2:  lea        rdx,[rip+0x1cbef]        # 0x180023ce8   ; "Camera"
+1800070f9:  lea        rcx,[rsp+0x70]
+1800070fe:  call       0x180004cc0
+180007103:  nop        
+180007104:  lea        rdx,[rip+0x1bf9d]        # 0x1800230a8   ; "Group_Camera"
+18000710b:  lea        rcx,[rbp-0x30]
+18000710f:  call       0x180004330
+180007114:  nop        
+180007115:  lea        r9,[rsp+0x50]
+18000711a:  lea        r8,[rsp+0x70]
+18000711f:  mov        rdx,rax
+180007122:  mov        rcx,rsi
+180007125:  call       0x18001d780
+18000712a:  nop        
+18000712b:  lea        rcx,[rbp-0x30]
+18000712f:  call       0x180003f10
+180007134:  nop        
+180007135:  mov        rdx,QWORD PTR [rbp-0x78]
+180007139:  cmp        rdx,0x10
+18000713d:  jb         0x180007174
+18000713f:  inc        rdx
+180007142:  mov        rcx,QWORD PTR [rsp+0x70]
+180007147:  mov        rax,rcx
+18000714a:  cmp        rdx,0x1000
+180007151:  jb         0x18000716f
+180007153:  add        rdx,0x27
+180007157:  mov        rcx,QWORD PTR [rcx-0x8]
+18000715b:  sub        rax,rcx
+18000715e:  add        rax,0xfffffffffffffff8
+180007162:  cmp        rax,0x1f
+180007166:  jbe        0x18000716f
+180007168:  call       QWORD PTR [rip+0x1b1e2]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+18000716e:  int3       
+18000716f:  call       0x18001ed7c
+180007174:  mov        QWORD PTR [rbp-0x80],r13
+180007178:  mov        QWORD PTR [rbp-0x78],0xf
+180007180:  mov        BYTE PTR [rsp+0x70],0x0
+180007185:  mov        rdx,QWORD PTR [rsp+0x68]
+18000718a:  cmp        rdx,0x10
+18000718e:  jb         0x1800071c5
+180007190:  inc        rdx
+180007193:  mov        rcx,QWORD PTR [rsp+0x50]
+180007198:  mov        rax,rcx
+18000719b:  cmp        rdx,0x1000
+1800071a2:  jb         0x1800071c0
+1800071a4:  add        rdx,0x27
+1800071a8:  mov        rcx,QWORD PTR [rcx-0x8]
+1800071ac:  sub        rax,rcx
+1800071af:  add        rax,0xfffffffffffffff8
+1800071b3:  cmp        rax,0x1f
+1800071b7:  jbe        0x1800071c0
+1800071b9:  call       QWORD PTR [rip+0x1b191]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+1800071bf:  int3       
+1800071c0:  call       0x18001ed7c
+1800071c5:  lea        rdx,[rip+0x1c074]        # 0x180023240   ; "Projection_Wide"
+1800071cc:  lea        rcx,[rbp+0x3f0]
+1800071d3:  call       0x180004330
+1800071d8:  nop        
+1800071d9:  lea        rdx,[rip+0x1c078]        # 0x180023258   ; "Projection_CrystallBall"
+1800071e0:  lea        rcx,[rbp+0x410]
+1800071e7:  call       0x180004330
+1800071ec:  nop        
+1800071ed:  lea        rdx,[rip+0x1c08c]        # 0x180023280   ; "Projection_TinyPlanet"
+1800071f4:  lea        rcx,[rbp+0x430]
+1800071fb:  call       0x180004330
+180007200:  nop        
+180007201:  lea        rdx,[rip+0x1c0a0]        # 0x1800232a8   ; "Projection_UltraWide"
+180007208:  lea        rcx,[rbp+0x450]
+18000720f:  call       0x180004330
+180007214:  nop        
+180007215:  lea        rdx,[rip+0x1c0b4]        # 0x1800232d0   ; "Projection_Dewarp"
+18000721c:  lea        rcx,[rbp+0x470]
+180007223:  call       0x180004330
+180007228:  nop        
+180007229:  mov        QWORD PTR [rsp+0x70],r13
+18000722e:  mov        QWORD PTR [rbp-0x80],r13
+180007232:  mov        QWORD PTR [rbp-0x78],0xf
+18000723a:  mov        BYTE PTR [rsp+0x70],0x0
+18000723f:  mov        r8d,0xa
+180007245:  lea        rdx,[rip+0x1bfe4]        # 0x180023230   ; "Projection"
+18000724c:  lea        rcx,[rsp+0x70]
+180007251:  call       0x180004cc0
+180007256:  nop        
+180007257:  mov        QWORD PTR [rsp+0x50],r13
+18000725c:  mov        QWORD PTR [rsp+0x60],r13
+180007261:  mov        QWORD PTR [rsp+0x68],0xf
+18000726a:  mov        BYTE PTR [rsp+0x50],0x0
+18000726f:  mov        r8d,0x16
+180007275:  lea        rdx,[rip+0x1c554]        # 0x1800237d0   ; "camera_projection_type"
+18000727c:  lea        rcx,[rsp+0x50]
+180007281:  call       0x180004cc0
+180007286:  nop        
+180007287:  lea        rdx,[rip+0x1bf8a]        # 0x180023218   ; "Param_Projection"
+18000728e:  lea        rcx,[rbp-0x30]
+180007292:  call       0x180004330
+180007297:  mov        rbx,rax
+18000729a:  lea        rdx,[rsp+0x50]
+18000729f:  mov        rcx,r14
+1800072a2:  call       0x18001c050
+1800072a7:  mov        rdi,rax
+1800072aa:  mov        r9,rbx
+1800072ad:  mov        r8,rbx
+1800072b0:  mov        rdx,rbx
+1800072b3:  mov        rcx,rax
+1800072b6:  call       0x18001d780
+1800072bb:  lea        rdx,[rsp+0x50]
+1800072c0:  mov        rcx,rdi
+1800072c3:  call       0x18001da20
+1800072c8:  lea        rdx,[rsp+0x70]
+1800072cd:  mov        rcx,rdi
+1800072d0:  call       0x18001d6f0
+1800072d5:  xor        edx,edx
+1800072d7:  mov        rcx,rdi
+1800072da:  call       0x18001cc60
+1800072df:  lea        rbx,[rbp+0x3f0]
+1800072e6:  mov        r12d,0x5
+1800072ec:  nop        DWORD PTR [rax+0x0]
+1800072f0:  mov        r8,rbx
+1800072f3:  mov        rdx,rbx
+1800072f6:  mov        rcx,rdi
+1800072f9:  call       0x18001bd50
+1800072fe:  add        rbx,0x20
+180007302:  sub        r12,0x1
+180007306:  jne        0x1800072f0
+180007308:  test       rsi,rsi
+18000730b:  je         0x180007319
+18000730d:  mov        rdx,rsi
+180007310:  mov        rcx,rdi
+180007313:  call       0x18001d850
+180007318:  nop        
+180007319:  lea        rcx,[rbp-0x30]
+18000731d:  call       0x180003f10
+180007322:  nop        
+180007323:  mov        rdx,QWORD PTR [rsp+0x68]
+180007328:  cmp        rdx,0x10
+18000732c:  jb         0x180007363
+18000732e:  inc        rdx
+180007331:  mov        rcx,QWORD PTR [rsp+0x50]
+180007336:  mov        rax,rcx
+180007339:  cmp        rdx,0x1000
+180007340:  jb         0x18000735e
+180007342:  add        rdx,0x27
+180007346:  mov        rcx,QWORD PTR [rcx-0x8]
+18000734a:  sub        rax,rcx
+18000734d:  add        rax,0xfffffffffffffff8
+180007351:  cmp        rax,0x1f
+180007355:  jbe        0x18000735e
+180007357:  call       QWORD PTR [rip+0x1aff3]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+18000735d:  int3       
+18000735e:  call       0x18001ed7c
+180007363:  mov        QWORD PTR [rsp+0x60],r13
+180007368:  mov        QWORD PTR [rsp+0x68],0xf
+180007371:  mov        BYTE PTR [rsp+0x50],0x0
+180007376:  mov        rdx,QWORD PTR [rbp-0x78]
+18000737a:  cmp        rdx,0x10
+18000737e:  jb         0x1800073b5
+180007380:  inc        rdx
+180007383:  mov        rcx,QWORD PTR [rsp+0x70]
+180007388:  mov        rax,rcx
+18000738b:  cmp        rdx,0x1000
+180007392:  jb         0x1800073b0
+180007394:  add        rdx,0x27
+180007398:  mov        rcx,QWORD PTR [rcx-0x8]
+18000739c:  sub        rax,rcx
+18000739f:  add        rax,0xfffffffffffffff8
+1800073a3:  cmp        rax,0x1f
+1800073a7:  jbe        0x1800073b0
+1800073a9:  call       QWORD PTR [rip+0x1afa1]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+1800073af:  int3       
+1800073b0:  call       0x18001ed7c
+1800073b5:  mov        QWORD PTR [rbp-0x80],r13
+1800073b9:  mov        QWORD PTR [rbp-0x78],0xf
+1800073c1:  mov        BYTE PTR [rsp+0x70],0x0
+1800073c6:  xor        edx,edx
+1800073c8:  mov        rcx,rdi
+1800073cb:  call       0x18001cc30
+1800073d0:  mov        rdx,rdi
+1800073d3:  mov        rcx,r15
+1800073d6:  call       0x18001bd00
+1800073db:  mov        QWORD PTR [rsp+0x50],r13
+1800073e0:  mov        QWORD PTR [rsp+0x60],r13
+1800073e5:  mov        QWORD PTR [rsp+0x68],0xf
+1800073ee:  mov        BYTE PTR [rsp+0x50],0x0
+1800073f3:  mov        r8d,0x3
+1800073f9:  lea        rdx,[rip+0x1befc]        # 0x1800232fc   ; "Pan"
+180007400:  lea        rcx,[rsp+0x50]
+180007405:  call       0x180004cc0
+18000740a:  nop        
+18000740b:  mov        QWORD PTR [rsp+0x70],r13
+180007410:  mov        QWORD PTR [rbp-0x80],r13
+180007414:  mov        QWORD PTR [rbp-0x78],0xf
+18000741c:  mov        BYTE PTR [rsp+0x70],0x0
+180007421:  mov        r8d,0xa
+180007427:  lea        rdx,[rip+0x1c3ba]        # 0x1800237e8   ; "camera_pan"
+18000742e:  lea        rcx,[rsp+0x70]
+180007433:  call       0x180004cc0
+180007438:  nop        
+180007439:  lea        rdx,[rip+0x1beb0]        # 0x1800232f0   ; "Param_Pan"
+180007440:  lea        rcx,[rbp-0x30]
+180007444:  call       0x180004330
+180007449:  nop        
+18000744a:  movss      xmm6,DWORD PTR [rip+0x1cac6]        # 0x180023f18   ; float 3.4028235e+38
+180007452:  movss      DWORD PTR [rsp+0x48],xmm6
+180007458:  movss      xmm7,DWORD PTR [rip+0x1cac4]        # 0x180023f24   ; float -3.4028235e+38
+180007460:  movss      DWORD PTR [rsp+0x40],xmm7
+180007466:  xorps      xmm8,xmm8
+18000746a:  movss      DWORD PTR [rsp+0x38],xmm8
+180007471:  movss      xmm9,DWORD PTR [rip+0x1ca9a]        # 0x180023f14   ; float 360
+18000747a:  movss      DWORD PTR [rsp+0x30],xmm9
+180007481:  movss      xmm10,DWORD PTR [rip+0x1ca96]        # 0x180023f20   ; float -360
+18000748a:  movss      DWORD PTR [rsp+0x28],xmm10
+180007491:  mov        QWORD PTR [rsp+0x20],rsi
+180007496:  lea        r9,[rsp+0x50]
+18000749b:  mov        r8,rax
+18000749e:  lea        rdx,[rsp+0x70]
+1800074a3:  mov        rcx,r14
+1800074a6:  call       0x1800059a0
+1800074ab:  mov        rdx,rax
+1800074ae:  mov        rcx,r15
+1800074b1:  call       0x18001bd00
+1800074b6:  nop        
+1800074b7:  lea        rcx,[rbp-0x30]
+1800074bb:  call       0x180003f10
+1800074c0:  nop        
+1800074c1:  mov        rdx,QWORD PTR [rbp-0x78]
+1800074c5:  cmp        rdx,0x10
+1800074c9:  jb         0x180007500
+1800074cb:  inc        rdx
+1800074ce:  mov        rcx,QWORD PTR [rsp+0x70]
+1800074d3:  mov        rax,rcx
+1800074d6:  cmp        rdx,0x1000
+1800074dd:  jb         0x1800074fb
+1800074df:  add        rdx,0x27
+1800074e3:  mov        rcx,QWORD PTR [rcx-0x8]
+1800074e7:  sub        rax,rcx
+1800074ea:  add        rax,0xfffffffffffffff8
+1800074ee:  cmp        rax,0x1f
+1800074f2:  jbe        0x1800074fb
+1800074f4:  call       QWORD PTR [rip+0x1ae56]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+1800074fa:  int3       
+1800074fb:  call       0x18001ed7c
+180007500:  mov        QWORD PTR [rbp-0x80],r13
+180007504:  mov        QWORD PTR [rbp-0x78],0xf
+18000750c:  mov        BYTE PTR [rsp+0x70],0x0
+180007511:  mov        rdx,QWORD PTR [rsp+0x68]
+180007516:  cmp        rdx,0x10
+18000751a:  jb         0x180007551
+18000751c:  inc        rdx
+18000751f:  mov        rcx,QWORD PTR [rsp+0x50]
+180007524:  mov        rax,rcx
+180007527:  cmp        rdx,0x1000
+18000752e:  jb         0x18000754c
+180007530:  add        rdx,0x27
+180007534:  mov        rcx,QWORD PTR [rcx-0x8]
+180007538:  sub        rax,rcx
+18000753b:  add        rax,0xfffffffffffffff8
+18000753f:  cmp        rax,0x1f
+180007543:  jbe        0x18000754c
+180007545:  call       QWORD PTR [rip+0x1ae05]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+18000754b:  int3       
+18000754c:  call       0x18001ed7c
+180007551:  mov        QWORD PTR [rsp+0x50],r13
+180007556:  mov        QWORD PTR [rsp+0x60],r13
+18000755b:  mov        QWORD PTR [rsp+0x68],0xf
+180007564:  mov        BYTE PTR [rsp+0x50],0x0
+180007569:  mov        r8d,0x4
+18000756f:  lea        rdx,[rip+0x1bd96]        # 0x18002330c   ; "Tilt"
+180007576:  lea        rcx,[rsp+0x50]
+18000757b:  call       0x180004cc0
+180007580:  nop        
+180007581:  mov        QWORD PTR [rsp+0x70],r13
+180007586:  mov        QWORD PTR [rbp-0x80],r13
+18000758a:  mov        QWORD PTR [rbp-0x78],0xf
+180007592:  mov        BYTE PTR [rsp+0x70],0x0
+180007597:  mov        r8d,0xb
+18000759d:  lea        rdx,[rip+0x1c254]        # 0x1800237f8   ; "camera_tilt"
+1800075a4:  lea        rcx,[rsp+0x70]
+1800075a9:  call       0x180004cc0
+1800075ae:  nop        
+1800075af:  lea        rdx,[rip+0x1bd4a]        # 0x180023300   ; "Param_Tilt"
+1800075b6:  lea        rcx,[rbp-0x30]
+1800075ba:  call       0x180004330
+1800075bf:  nop        
+1800075c0:  movss      DWORD PTR [rsp+0x48],xmm6
+1800075c6:  movss      DWORD PTR [rsp+0x40],xmm7
+1800075cc:  movss      DWORD PTR [rsp+0x38],xmm8
+1800075d3:  movss      DWORD PTR [rsp+0x30],xmm9
+1800075da:  movss      DWORD PTR [rsp+0x28],xmm10
+1800075e1:  mov        QWORD PTR [rsp+0x20],rsi
+1800075e6:  lea        r9,[rsp+0x50]
+1800075eb:  mov        r8,rax
+1800075ee:  lea        rdx,[rsp+0x70]
+1800075f3:  mov        rcx,r14
+1800075f6:  call       0x1800059a0
+1800075fb:  mov        rdx,rax
+1800075fe:  mov        rcx,r15
+180007601:  call       0x18001bd00
+180007606:  nop        
+180007607:  lea        rcx,[rbp-0x30]
+18000760b:  call       0x180003f10
+180007610:  nop        
+180007611:  mov        rdx,QWORD PTR [rbp-0x78]
+180007615:  cmp        rdx,0x10
+180007619:  jb         0x180007650
+18000761b:  inc        rdx
+18000761e:  mov        rcx,QWORD PTR [rsp+0x70]
+180007623:  mov        rax,rcx
+180007626:  cmp        rdx,0x1000
+18000762d:  jb         0x18000764b
+18000762f:  add        rdx,0x27
+180007633:  mov        rcx,QWORD PTR [rcx-0x8]
+180007637:  sub        rax,rcx
+18000763a:  add        rax,0xfffffffffffffff8
+18000763e:  cmp        rax,0x1f
+180007642:  jbe        0x18000764b
+180007644:  call       QWORD PTR [rip+0x1ad06]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+18000764a:  int3       
+18000764b:  call       0x18001ed7c
+180007650:  mov        QWORD PTR [rbp-0x80],r13
+180007654:  mov        QWORD PTR [rbp-0x78],0xf
+18000765c:  mov        BYTE PTR [rsp+0x70],0x0
+180007661:  mov        rdx,QWORD PTR [rsp+0x68]
+180007666:  cmp        rdx,0x10
+18000766a:  jb         0x1800076a1
+18000766c:  inc        rdx
+18000766f:  mov        rcx,QWORD PTR [rsp+0x50]
+180007674:  mov        rax,rcx
+180007677:  cmp        rdx,0x1000
+18000767e:  jb         0x18000769c
+180007680:  add        rdx,0x27
+180007684:  mov        rcx,QWORD PTR [rcx-0x8]
+180007688:  sub        rax,rcx
+18000768b:  add        rax,0xfffffffffffffff8
+18000768f:  cmp        rax,0x1f
+180007693:  jbe        0x18000769c
+180007695:  call       QWORD PTR [rip+0x1acb5]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+18000769b:  int3       
+18000769c:  call       0x18001ed7c
+1800076a1:  mov        QWORD PTR [rsp+0x50],r13
+1800076a6:  mov        QWORD PTR [rsp+0x60],r13
+1800076ab:  mov        QWORD PTR [rsp+0x68],0xf
+1800076b4:  mov        BYTE PTR [rsp+0x50],0x0
+1800076b9:  mov        r8d,0x4
+1800076bf:  lea        rdx,[rip+0x1c62a]        # 0x180023cf0   ; "Roll"
+1800076c6:  lea        rcx,[rsp+0x50]
+1800076cb:  call       0x180004cc0
+1800076d0:  nop        
+1800076d1:  mov        QWORD PTR [rsp+0x70],r13
+1800076d6:  mov        QWORD PTR [rbp-0x80],r13
+1800076da:  mov        QWORD PTR [rbp-0x78],0xf
+1800076e2:  mov        BYTE PTR [rsp+0x70],0x0
+1800076e7:  mov        r8d,0xd
+1800076ed:  lea        rdx,[rip+0x1c114]        # 0x180023808   ; "camera_rotate"
+1800076f4:  lea        rcx,[rsp+0x70]
+1800076f9:  call       0x180004cc0
+1800076fe:  nop        
+1800076ff:  lea        rdx,[rip+0x1bc12]        # 0x180023318   ; "Param_Roll"
+180007706:  lea        rcx,[rbp-0x30]
+18000770a:  call       0x180004330
+18000770f:  nop        
+180007710:  movss      DWORD PTR [rsp+0x48],xmm6
+180007716:  movss      DWORD PTR [rsp+0x40],xmm7
+18000771c:  movss      DWORD PTR [rsp+0x38],xmm8
+180007723:  movss      DWORD PTR [rsp+0x30],xmm9
+18000772a:  movss      DWORD PTR [rsp+0x28],xmm10
+180007731:  mov        QWORD PTR [rsp+0x20],rsi
+180007736:  lea        r9,[rsp+0x50]
+18000773b:  mov        r8,rax
+18000773e:  lea        rdx,[rsp+0x70]
+180007743:  mov        rcx,r14
+180007746:  call       0x1800059a0
+18000774b:  mov        rdx,rax
+18000774e:  mov        rcx,r15
+180007751:  call       0x18001bd00
+180007756:  nop        
+180007757:  lea        rcx,[rbp-0x30]
+18000775b:  call       0x180003f10
+180007760:  nop        
+180007761:  mov        rdx,QWORD PTR [rbp-0x78]
+180007765:  cmp        rdx,0x10
+180007769:  jb         0x1800077a0
+18000776b:  inc        rdx
+18000776e:  mov        rcx,QWORD PTR [rsp+0x70]
+180007773:  mov        rax,rcx
+180007776:  cmp        rdx,0x1000
+18000777d:  jb         0x18000779b
+18000777f:  add        rdx,0x27
+180007783:  mov        rcx,QWORD PTR [rcx-0x8]
+180007787:  sub        rax,rcx
+18000778a:  add        rax,0xfffffffffffffff8
+18000778e:  cmp        rax,0x1f
+180007792:  jbe        0x18000779b
+180007794:  call       QWORD PTR [rip+0x1abb6]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+18000779a:  int3       
+18000779b:  call       0x18001ed7c
+1800077a0:  mov        QWORD PTR [rbp-0x80],r13
+1800077a4:  mov        QWORD PTR [rbp-0x78],0xf
+1800077ac:  mov        BYTE PTR [rsp+0x70],0x0
+1800077b1:  mov        rdx,QWORD PTR [rsp+0x68]
+1800077b6:  cmp        rdx,0x10
+1800077ba:  jb         0x1800077f1
+1800077bc:  inc        rdx
+1800077bf:  mov        rcx,QWORD PTR [rsp+0x50]
+1800077c4:  mov        rax,rcx
+1800077c7:  cmp        rdx,0x1000
+1800077ce:  jb         0x1800077ec
+1800077d0:  add        rdx,0x27
+1800077d4:  mov        rcx,QWORD PTR [rcx-0x8]
+1800077d8:  sub        rax,rcx
+1800077db:  add        rax,0xfffffffffffffff8
+1800077df:  cmp        rax,0x1f
+1800077e3:  jbe        0x1800077ec
+1800077e5:  call       QWORD PTR [rip+0x1ab65]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+1800077eb:  int3       
+1800077ec:  call       0x18001ed7c
+1800077f1:  mov        QWORD PTR [rsp+0x50],r13
+1800077f6:  mov        QWORD PTR [rsp+0x60],r13
+1800077fb:  mov        QWORD PTR [rsp+0x68],0xf
+180007804:  mov        BYTE PTR [rsp+0x50],0x0
+180007809:  mov        r8d,0x3
+18000780f:  lea        rdx,[rip+0x1c4e2]        # 0x180023cf8   ; "FOV"
+180007816:  lea        rcx,[rsp+0x50]
+18000781b:  call       0x180004cc0
+180007820:  nop        
+180007821:  mov        QWORD PTR [rsp+0x70],r13
+180007826:  mov        QWORD PTR [rbp-0x80],r13
+18000782a:  mov        QWORD PTR [rbp-0x78],0xf
+180007832:  mov        BYTE PTR [rsp+0x70],0x0
+180007837:  mov        r8d,0x12
+18000783d:  lea        rdx,[rip+0x1bfd4]        # 0x180023818   ; "camera_fov_control"
+180007844:  lea        rcx,[rsp+0x70]
+180007849:  call       0x180004cc0
+18000784e:  nop        
+18000784f:  lea        rdx,[rip+0x1bada]        # 0x180023330   ; "Param_FOV"
+180007856:  lea        rcx,[rbp-0x30]
+18000785a:  call       0x180004330
+18000785f:  nop        
+180007860:  movss      DWORD PTR [rsp+0x48],xmm6
+180007866:  movss      DWORD PTR [rsp+0x40],xmm7
+18000786c:  movss      xmm0,DWORD PTR [rip+0x1c694]        # 0x180023f08   ; float 60
+180007874:  movss      DWORD PTR [rsp+0x38],xmm0
+18000787a:  movss      xmm1,DWORD PTR [rip+0x1c68a]        # 0x180023f0c   ; float 178
+180007882:  movss      DWORD PTR [rsp+0x30],xmm1
+180007888:  movss      xmm0,DWORD PTR [rip+0x1c650]        # 0x180023ee0   ; float 1
+180007890:  movss      DWORD PTR [rsp+0x28],xmm0
+180007896:  mov        QWORD PTR [rsp+0x20],rsi
+18000789b:  lea        r9,[rsp+0x50]
+1800078a0:  mov        r8,rax
+1800078a3:  lea        rdx,[rsp+0x70]
+1800078a8:  mov        rcx,r14
+1800078ab:  call       0x180005b40
+1800078b0:  mov        rdx,rax
+1800078b3:  mov        rcx,r15
+1800078b6:  call       0x18001bd00
+1800078bb:  nop        
+1800078bc:  lea        rcx,[rbp-0x30]
+1800078c0:  call       0x180003f10
+1800078c5:  nop        
+1800078c6:  mov        rdx,QWORD PTR [rbp-0x78]
+1800078ca:  cmp        rdx,0x10
+1800078ce:  jb         0x180007905
+1800078d0:  inc        rdx
+1800078d3:  mov        rcx,QWORD PTR [rsp+0x70]
+1800078d8:  mov        rax,rcx
+1800078db:  cmp        rdx,0x1000
+1800078e2:  jb         0x180007900
+1800078e4:  add        rdx,0x27
+1800078e8:  mov        rcx,QWORD PTR [rcx-0x8]
+1800078ec:  sub        rax,rcx
+1800078ef:  add        rax,0xfffffffffffffff8
+1800078f3:  cmp        rax,0x1f
+1800078f7:  jbe        0x180007900
+1800078f9:  call       QWORD PTR [rip+0x1aa51]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+1800078ff:  int3       
+180007900:  call       0x18001ed7c
+180007905:  mov        QWORD PTR [rbp-0x80],r13
+180007909:  mov        QWORD PTR [rbp-0x78],0xf
+180007911:  mov        BYTE PTR [rsp+0x70],0x0
+180007916:  mov        rdx,QWORD PTR [rsp+0x68]
+18000791b:  cmp        rdx,0x10
+18000791f:  jb         0x180007956
+180007921:  inc        rdx
+180007924:  mov        rcx,QWORD PTR [rsp+0x50]
+180007929:  mov        rax,rcx
+18000792c:  cmp        rdx,0x1000
+180007933:  jb         0x180007951
+180007935:  add        rdx,0x27
+180007939:  mov        rcx,QWORD PTR [rcx-0x8]
+18000793d:  sub        rax,rcx
+180007940:  add        rax,0xfffffffffffffff8
+180007944:  cmp        rax,0x1f
+180007948:  jbe        0x180007951
+18000794a:  call       QWORD PTR [rip+0x1aa00]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007950:  int3       
+180007951:  call       0x18001ed7c
+180007956:  mov        QWORD PTR [rsp+0x50],r13
+18000795b:  mov        QWORD PTR [rsp+0x60],r13
+180007960:  mov        QWORD PTR [rsp+0x68],0xf
+180007969:  mov        BYTE PTR [rsp+0x50],0x0
+18000796e:  mov        r8d,0xa
+180007974:  lea        rdx,[rip+0x1c385]        # 0x180023d00   ; "Distortion"
+18000797b:  lea        rcx,[rsp+0x50]
+180007980:  call       0x180004cc0
+180007985:  nop        
+180007986:  mov        QWORD PTR [rsp+0x70],r13
+18000798b:  mov        QWORD PTR [rbp-0x80],r13
+18000798f:  mov        QWORD PTR [rbp-0x78],0xf
+180007997:  mov        BYTE PTR [rsp+0x70],0x0
+18000799c:  mov        r8d,0x19
+1800079a2:  lea        rdx,[rip+0x1be87]        # 0x180023830   ; "camera_distortion_control"
+1800079a9:  lea        rcx,[rsp+0x70]
+1800079ae:  call       0x180004cc0
+1800079b3:  nop        
+1800079b4:  lea        rdx,[rip+0x1b995]        # 0x180023350   ; "Param_Distortion"
+1800079bb:  lea        rcx,[rbp-0x30]
+1800079bf:  call       0x180004330
+1800079c4:  nop        
+1800079c5:  movss      DWORD PTR [rsp+0x48],xmm6
+1800079cb:  movss      DWORD PTR [rsp+0x40],xmm7
+1800079d1:  movss      xmm0,DWORD PTR [rip+0x1c503]        # 0x180023edc   ; float 0.60000002
+1800079d9:  movss      DWORD PTR [rsp+0x38],xmm0
+1800079df:  movss      xmm1,DWORD PTR [rip+0x1c509]        # 0x180023ef0   ; float 1.8
+1800079e7:  movss      DWORD PTR [rsp+0x30],xmm1
+1800079ed:  movss      DWORD PTR [rsp+0x28],xmm8
+1800079f4:  mov        QWORD PTR [rsp+0x20],rsi
+1800079f9:  lea        r9,[rsp+0x50]
+1800079fe:  mov        r8,rax
+180007a01:  lea        rdx,[rsp+0x70]
+180007a06:  mov        rcx,r14
+180007a09:  call       0x180005b40
+180007a0e:  mov        rdx,rax
+180007a11:  mov        rcx,r15
+180007a14:  call       0x18001bd00
+180007a19:  nop        
+180007a1a:  lea        rcx,[rbp-0x30]
+180007a1e:  call       0x180003f10
+180007a23:  nop        
+180007a24:  mov        rdx,QWORD PTR [rbp-0x78]
+180007a28:  cmp        rdx,0x10
+180007a2c:  jb         0x180007a63
+180007a2e:  inc        rdx
+180007a31:  mov        rcx,QWORD PTR [rsp+0x70]
+180007a36:  mov        rax,rcx
+180007a39:  cmp        rdx,0x1000
+180007a40:  jb         0x180007a5e
+180007a42:  add        rdx,0x27
+180007a46:  mov        rcx,QWORD PTR [rcx-0x8]
+180007a4a:  sub        rax,rcx
+180007a4d:  add        rax,0xfffffffffffffff8
+180007a51:  cmp        rax,0x1f
+180007a55:  jbe        0x180007a5e
+180007a57:  call       QWORD PTR [rip+0x1a8f3]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007a5d:  int3       
+180007a5e:  call       0x18001ed7c
+180007a63:  mov        QWORD PTR [rbp-0x80],r13
+180007a67:  mov        QWORD PTR [rbp-0x78],0xf
+180007a6f:  mov        BYTE PTR [rsp+0x70],0x0
+180007a74:  mov        rdx,QWORD PTR [rsp+0x68]
+180007a79:  cmp        rdx,0x10
+180007a7d:  jb         0x180007ab4
+180007a7f:  inc        rdx
+180007a82:  mov        rcx,QWORD PTR [rsp+0x50]
+180007a87:  mov        rax,rcx
+180007a8a:  cmp        rdx,0x1000
+180007a91:  jb         0x180007aaf
+180007a93:  add        rdx,0x27
+180007a97:  mov        rcx,QWORD PTR [rcx-0x8]
+180007a9b:  sub        rax,rcx
+180007a9e:  add        rax,0xfffffffffffffff8
+180007aa2:  cmp        rax,0x1f
+180007aa6:  jbe        0x180007aaf
+180007aa8:  call       QWORD PTR [rip+0x1a8a2]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007aae:  int3       
+180007aaf:  call       0x18001ed7c
+180007ab4:  mov        QWORD PTR [rsp+0x70],r13
+180007ab9:  mov        QWORD PTR [rbp-0x80],r13
+180007abd:  mov        QWORD PTR [rbp-0x78],0xf
+180007ac5:  mov        BYTE PTR [rsp+0x70],0x0
+180007aca:  mov        r8d,0xc
+180007ad0:  lea        rdx,[rip+0x1bd79]        # 0x180023850   ; "reset_button"
+180007ad7:  lea        rcx,[rsp+0x70]
+180007adc:  call       0x180004cc0
+180007ae1:  nop        
+180007ae2:  lea        rdx,[rsp+0x70]
+180007ae7:  mov        rcx,r14
+180007aea:  call       0x18001c5a0
+180007aef:  mov        rbx,rax
+180007af2:  mov        rdx,QWORD PTR [rbp-0x78]
+180007af6:  cmp        rdx,0x10
+180007afa:  jb         0x180007b31
+180007afc:  inc        rdx
+180007aff:  mov        rcx,QWORD PTR [rsp+0x70]
+180007b04:  mov        rax,rcx
+180007b07:  cmp        rdx,0x1000
+180007b0e:  jb         0x180007b2c
+180007b10:  add        rdx,0x27
+180007b14:  mov        rcx,QWORD PTR [rcx-0x8]
+180007b18:  sub        rax,rcx
+180007b1b:  add        rax,0xfffffffffffffff8
+180007b1f:  cmp        rax,0x1f
+180007b23:  jbe        0x180007b2c
+180007b25:  call       QWORD PTR [rip+0x1a825]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007b2b:  int3       
+180007b2c:  call       0x18001ed7c
+180007b31:  mov        QWORD PTR [rbp-0x80],r13
+180007b35:  mov        QWORD PTR [rbp-0x78],0xf
+180007b3d:  mov        BYTE PTR [rsp+0x70],0x0
+180007b42:  lea        rdx,[rip+0x1b837]        # 0x180023380   ; "Param_Reset"
+180007b49:  lea        rcx,[rbp-0x30]
+180007b4d:  call       0x180004330
+180007b52:  nop        
+180007b53:  mov        rdx,rax
+180007b56:  mov        rcx,rbx
+180007b59:  call       0x18001d750
+180007b5e:  nop        
+180007b5f:  lea        rcx,[rbp-0x30]
+180007b63:  call       0x180003f10
+180007b68:  mov        QWORD PTR [rsp+0x50],r13
+180007b6d:  mov        QWORD PTR [rsp+0x60],r13
+180007b72:  mov        QWORD PTR [rsp+0x68],0xf
+180007b7b:  mov        BYTE PTR [rsp+0x50],0x0
+180007b80:  mov        r8d,0x17
+180007b86:  lea        rdx,[rip+0x1c183]        # 0x180023d10   ; "Reset camera parameters"
+180007b8d:  lea        rcx,[rsp+0x50]
+180007b92:  call       0x180004cc0
+180007b97:  nop        
+180007b98:  lea        rdx,[rsp+0x50]
+180007b9d:  mov        rcx,rbx
+180007ba0:  call       0x18001d6f0
+180007ba5:  nop        
+180007ba6:  mov        rdx,QWORD PTR [rsp+0x68]
+180007bab:  cmp        rdx,0x10
+180007baf:  jb         0x180007be6
+180007bb1:  inc        rdx
+180007bb4:  mov        rcx,QWORD PTR [rsp+0x50]
+180007bb9:  mov        rax,rcx
+180007bbc:  cmp        rdx,0x1000
+180007bc3:  jb         0x180007be1
+180007bc5:  add        rdx,0x27
+180007bc9:  mov        rcx,QWORD PTR [rcx-0x8]
+180007bcd:  sub        rax,rcx
+180007bd0:  add        rax,0xfffffffffffffff8
+180007bd4:  cmp        rax,0x1f
+180007bd8:  jbe        0x180007be1
+180007bda:  call       QWORD PTR [rip+0x1a770]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007be0:  int3       
+180007be1:  call       0x18001ed7c
+180007be6:  mov        rdx,rsi
+180007be9:  mov        rcx,rbx
+180007bec:  call       0x18001d850
+180007bf1:  mov        rdx,rbx
+180007bf4:  mov        rcx,r15
+180007bf7:  call       0x18001bd00
+180007bfc:  mov        QWORD PTR [rbp-0x70],r13
+180007c00:  mov        QWORD PTR [rbp-0x60],r13
+180007c04:  mov        QWORD PTR [rbp-0x58],0xf
+180007c0c:  mov        BYTE PTR [rbp-0x70],0x0
+180007c10:  mov        r8d,0x10
+180007c16:  lea        rdx,[rip+0x1c10b]        # 0x180023d28   ; "SourceFileParams"
+180007c1d:  lea        rcx,[rbp-0x70]
+180007c21:  call       0x180004cc0
+180007c26:  nop        
+180007c27:  lea        rdx,[rbp-0x70]
+180007c2b:  mov        rcx,r14
+180007c2e:  call       0x18001c270
+180007c33:  mov        rbx,rax
+180007c36:  mov        rdx,QWORD PTR [rbp-0x58]
+180007c3a:  cmp        rdx,0x10
+180007c3e:  jb         0x180007c74
+180007c40:  inc        rdx
+180007c43:  mov        rcx,QWORD PTR [rbp-0x70]
+180007c47:  mov        rax,rcx
+180007c4a:  cmp        rdx,0x1000
+180007c51:  jb         0x180007c6f
+180007c53:  add        rdx,0x27
+180007c57:  mov        rcx,QWORD PTR [rcx-0x8]
+180007c5b:  sub        rax,rcx
+180007c5e:  add        rax,0xfffffffffffffff8
+180007c62:  cmp        rax,0x1f
+180007c66:  jbe        0x180007c6f
+180007c68:  call       QWORD PTR [rip+0x1a6e2]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007c6e:  int3       
+180007c6f:  call       0x18001ed7c
+180007c74:  mov        QWORD PTR [rbp-0x60],r13
+180007c78:  mov        QWORD PTR [rbp-0x58],0xf
+180007c80:  mov        BYTE PTR [rbp-0x70],0x0
+180007c84:  mov        QWORD PTR [rsp+0x70],r13
+180007c89:  mov        QWORD PTR [rbp-0x80],r13
+180007c8d:  mov        QWORD PTR [rbp-0x78],0xf
+180007c95:  mov        BYTE PTR [rsp+0x70],0x0
+180007c9a:  mov        r8d,0x16
+180007ca0:  lea        rdx,[rip+0x1c099]        # 0x180023d40   ; "Source File Parameters"
+180007ca7:  lea        rcx,[rsp+0x70]
+180007cac:  call       0x180004cc0
+180007cb1:  nop        
+180007cb2:  lea        rdx,[rsp+0x70]
+180007cb7:  mov        rcx,rbx
+180007cba:  call       0x18001d6f0
+180007cbf:  nop        
+180007cc0:  mov        rdx,QWORD PTR [rbp-0x78]
+180007cc4:  cmp        rdx,0x10
+180007cc8:  jb         0x180007cff
+180007cca:  inc        rdx
+180007ccd:  mov        rcx,QWORD PTR [rsp+0x70]
+180007cd2:  mov        rax,rcx
+180007cd5:  cmp        rdx,0x1000
+180007cdc:  jb         0x180007cfa
+180007cde:  add        rdx,0x27
+180007ce2:  mov        rcx,QWORD PTR [rcx-0x8]
+180007ce6:  sub        rax,rcx
+180007ce9:  add        rax,0xfffffffffffffff8
+180007ced:  cmp        rax,0x1f
+180007cf1:  jbe        0x180007cfa
+180007cf3:  call       QWORD PTR [rip+0x1a657]        # 0x180022350   ; data 0x2e996 (d=9.430231e-319)
+180007cf9:  int3       
+180007cfa:  call       0x18001ed7c
+180007cff:  mov        QWORD PTR [rsp+0x70],r13
+180007d04:  movdqa     xmm0,XMMWORD PTR [rip+0x1c244]        # 0x180023f50   ; data 0x0 (d=0)
+180007d0c:  movdqu     XMMWORD PTR [rbp-0x80],xmm0
+180007d11:  mov        BYTE PTR [rsp+0x70],0x0
+180007d16:  mov        r8d,0xb
+180007d1c:  lea        rdx,[rip+0x1b3c5]        # 0x1800230e8   ; "Source File"
+180007d23:  lea        rcx,[rsp+0x70]
+180007d28:  call       0x180004cc0
+180007d2d:  nop        
+180007d2e:  mov        QWORD PTR [rbp-0x50],r13
+180007d32:  movdqa     xmm0,XMMWORD PTR [rip+0x1c216]        # 0x180023f50   ; data 0x0 (d=0)
+180007d3a:  movdqu     XMMWORD PTR [rbp-0x40],xmm0
+180007d3f:  mov        BYTE PTR [rbp-0x50],0x0
+180007d43:  mov        r8d,0xb
+180007d49:  lea        rdx,[rip+0x1b398]        # 0x1800230e8   ; "Source File"
+180007d50:  lea        rcx,[rbp-0x50]
+180007d54:  call       0x180004cc0
+180007d59:  nop        
+180007d5a:  lea        rdx,[rip+0x1b36f]        # 0x1800230d0   ; "Group_SourceFile"
+180007d61:  lea        rcx,[rbp-0x10]
+180007d65:  call       0x180004330
+180007d6a:  nop        
+180007d6b:  lea        r9,[rsp+0x70]
+180007d70:  lea        r8,[rbp-0x50]
+180007d74:  mov        rdx,rax
+180007d77:  mov        rcx,rbx
+180007d7a:  call       0x18001d780
+180007d7f:  nop        
+180007d80:  lea        rcx,[rbp-0x10]
+180007d84:  call       0x180003f10
+180007d89:  nop        
+180007d8a:  lea        rcx,[rbp-0x50]
+180007d8e:  call       0x180003f10
+180007d93:  nop        
+180007d94:  lea        rcx,[rsp+0x70]
+180007d99:  call       0x180003f10
+180007d9e:  lea        rdx,[rip+0x1bfb3]        # 0x180023d58   ; "Yaw"
+180007da5:  lea        rcx,[rsp+0x50]
+180007daa:  call       0x180003240
+180007daf:  nop        
+180007db0:  lea        rdx,[rip+0x1bac1]        # 0x180023878   ; "source_file_yaw"
+180007db7:  lea        rcx,[rbp-0x50]
+180007dbb:  call       0x180003240
+180007dc0:  nop        
+180007dc1:  lea        rdx,[rip+0x1b5d0]        # 0x180023398   ; "Param_Yaw"
+180007dc8:  lea        rcx,[rbp-0x10]
+180007dcc:  call       0x180004330
+180007dd1:  nop        
+180007dd2:  movss      DWORD PTR [rsp+0x48],xmm6
+180007dd8:  movss      DWORD PTR [rsp+0x40],xmm7
+180007dde:  movss      DWORD PTR [rsp+0x38],xmm8
+180007de5:  movss      DWORD PTR [rsp+0x30],xmm9
+180007dec:  movss      DWORD PTR [rsp+0x28],xmm10
+180007df3:  mov        QWORD PTR [rsp+0x20],rbx
+180007df8:  lea        r9,[rsp+0x50]
+180007dfd:  mov        r8,rax
+180007e00:  lea        rdx,[rbp-0x50]
+180007e04:  mov        rcx,r14
+180007e07:  call       0x1800059a0
+180007e0c:  mov        rdx,rax
+180007e0f:  mov        rcx,r15
+180007e12:  call       0x18001bd00
+180007e17:  nop        
+180007e18:  lea        rcx,[rbp-0x10]
+180007e1c:  call       0x180003f10
+180007e21:  nop        
+180007e22:  lea        rcx,[rbp-0x50]
+180007e26:  call       0x180003f10
+180007e2b:  nop        
+180007e2c:  lea        rcx,[rsp+0x50]
+180007e31:  call       0x180003f10
+180007e36:  lea        rdx,[rip+0x1bf1f]        # 0x180023d5c   ; "Pitch"
+180007e3d:  lea        rcx,[rbp+0x30]
+180007e41:  call       0x180003240
+180007e46:  nop        
+180007e47:  lea        rdx,[rip+0x1ba12]        # 0x180023860   ; "source_file_pitch"
+180007e4e:  lea        rcx,[rbp-0x50]
+180007e52:  call       0x180003240
+180007e57:  nop        
+180007e58:  lea        rdx,[rip+0x1b549]        # 0x1800233a8   ; "Param_Pitch"
+180007e5f:  lea        rcx,[rbp-0x10]
+180007e63:  call       0x180004330
+180007e68:  nop        
+180007e69:  movss      DWORD PTR [rsp+0x48],xmm6
+180007e6f:  movss      DWORD PTR [rsp+0x40],xmm7
+180007e75:  movss      DWORD PTR [rsp+0x38],xmm8
+180007e7c:  movss      DWORD PTR [rsp+0x30],xmm9
+180007e83:  movss      DWORD PTR [rsp+0x28],xmm10
+180007e8a:  mov        QWORD PTR [rsp+0x20],rbx
+180007e8f:  lea        r9,[rbp+0x30]
+180007e93:  mov        r8,rax
+180007e96:  lea        rdx,[rbp-0x50]
+180007e9a:  mov        rcx,r14
+180007e9d:  call       0x1800059a0
+180007ea2:  mov        rdx,rax
+180007ea5:  mov        rcx,r15
+180007ea8:  call       0x18001bd00
+180007ead:  nop        
+180007eae:  lea        rcx,[rbp-0x10]
+180007eb2:  call       0x180003f10
+180007eb7:  nop        
+180007eb8:  lea        rcx,[rbp-0x50]
+180007ebc:  call       0x180003f10
+180007ec1:  nop        
+180007ec2:  lea        rcx,[rbp+0x30]
+180007ec6:  call       0x180003f10
+180007ecb:  lea        rdx,[rip+0x1be1e]        # 0x180023cf0   ; "Roll"
+180007ed2:  lea        rcx,[rbp+0x110]
+180007ed9:  call       0x180003240
+180007ede:  nop        
+180007edf:  lea        rdx,[rip+0x1b9a2]        # 0x180023888   ; "source_file_roll"
+180007ee6:  lea        rcx,[rbp+0x30]
+180007eea:  call       0x180003240
+180007eef:  nop        
+180007ef0:  lea        rdx,[rip+0x1b4c1]        # 0x1800233b8   ; "Param_SrcRoll"
+180007ef7:  lea        rcx,[rbp-0x10]
+180007efb:  call       0x180004330
+180007f00:  nop        
+180007f01:  movss      DWORD PTR [rsp+0x48],xmm6
+180007f07:  movss      DWORD PTR [rsp+0x40],xmm7
+180007f0d:  movss      DWORD PTR [rsp+0x38],xmm8
+180007f14:  movss      DWORD PTR [rsp+0x30],xmm9
+180007f1b:  movss      DWORD PTR [rsp+0x28],xmm10
+180007f22:  mov        QWORD PTR [rsp+0x20],rbx
+180007f27:  lea        r9,[rbp+0x110]
+180007f2e:  mov        r8,rax
+180007f31:  lea        rdx,[rbp+0x30]
+180007f35:  mov        rcx,r14
+180007f38:  call       0x1800059a0
+180007f3d:  mov        rdx,rax
+180007f40:  mov        rcx,r15
+180007f43:  call       0x18001bd00
+180007f48:  nop        
+180007f49:  lea        rcx,[rbp-0x10]
+180007f4d:  call       0x180003f10
+180007f52:  nop        
+180007f53:  lea        rcx,[rbp+0x30]
+180007f57:  call       0x180003f10
+180007f5c:  nop        
+180007f5d:  lea        rcx,[rbp+0x110]
+180007f64:  call       0x180003f10
+180007f69:  lea        rdx,[rip+0x1bdf8]        # 0x180023d68   ; "AdvancedParams"
+180007f70:  lea        rcx,[rbp+0x130]
+180007f77:  call       0x180003240
+180007f7c:  nop        
+180007f7d:  lea        rdx,[rbp+0x130]
+180007f84:  mov        rcx,r14
+180007f87:  call       0x18001c270
+180007f8c:  mov        rsi,rax
+180007f8f:  lea        rcx,[rbp+0x130]
+180007f96:  call       0x180003f10
+180007f9b:  lea        rdx,[rip+0x1bdd6]        # 0x180023d78   ; "Advanced Parameters"
+180007fa2:  lea        rcx,[rbp+0x50]
+180007fa6:  call       0x180003240
+180007fab:  nop        
+180007fac:  lea        rdx,[rbp+0x50]
+180007fb0:  mov        rcx,rsi
+180007fb3:  call       0x18001d6f0
+180007fb8:  nop        
+180007fb9:  lea        rcx,[rbp+0x50]
+180007fbd:  call       0x180003f10
+180007fc2:  lea        rdx,[rip+0x1b13f]        # 0x180023108   ; "Advanced"
+180007fc9:  lea        rcx,[rbp+0x150]
+180007fd0:  call       0x180003240
+180007fd5:  nop        
+180007fd6:  lea        rdx,[rip+0x1b12b]        # 0x180023108   ; "Advanced"
+180007fdd:  lea        rcx,[rbp+0x50]
+180007fe1:  call       0x180003240
+180007fe6:  nop        
+180007fe7:  lea        rdx,[rip+0x1b10a]        # 0x1800230f8   ; "Group_Advanced"
+180007fee:  lea        rcx,[rbp-0x10]
+180007ff2:  call       0x180004330
+180007ff7:  nop        
+180007ff8:  lea        r9,[rbp+0x150]
+180007fff:  lea        r8,[rbp+0x50]
+180008003:  mov        rdx,rax
+180008006:  mov        rcx,rsi
+180008009:  call       0x18001d780
+18000800e:  nop        
+18000800f:  lea        rcx,[rbp-0x10]
+180008013:  call       0x180003f10
+180008018:  nop        
+180008019:  lea        rcx,[rbp+0x50]
+18000801d:  call       0x180003f10
+180008022:  nop        
+180008023:  lea        rcx,[rbp+0x150]
+18000802a:  call       0x180003f10
+18000802f:  lea        rdx,[rip+0x1bd5a]        # 0x180023d90   ; "BorderParams"
+180008036:  lea        rcx,[rbp+0x170]
+18000803d:  call       0x180003240
+180008042:  nop        
+180008043:  lea        rdx,[rbp+0x170]
+18000804a:  mov        rcx,r14
+18000804d:  call       0x18001c270
+180008052:  mov        rdi,rax
+180008055:  lea        rcx,[rbp+0x170]
+18000805c:  call       0x180003f10
+180008061:  lea        rdx,[rip+0x1bd38]        # 0x180023da0   ; "Background Settings"
+180008068:  lea        rcx,[rbp+0x70]
+18000806c:  call       0x180003240
+180008071:  nop        
+180008072:  lea        rdx,[rbp+0x70]
+180008076:  mov        rcx,rdi
+180008079:  call       0x18001d6f0
+18000807e:  nop        
+18000807f:  lea        rcx,[rbp+0x70]
+180008083:  call       0x180003f10
+180008088:  lea        rdx,[rip+0x1b0a1]        # 0x180023130   ; "Background"
+18000808f:  lea        rcx,[rbp+0x90]
+180008096:  call       0x180003240
+18000809b:  nop        
+18000809c:  lea        rdx,[rip+0x1b08d]        # 0x180023130   ; "Background"
+1800080a3:  lea        rcx,[rbp+0x70]
+1800080a7:  call       0x180003240
+1800080ac:  nop        
+1800080ad:  lea        rdx,[rip+0x1b064]        # 0x180023118   ; "Group_Background"
+1800080b4:  lea        rcx,[rbp-0x10]
+1800080b8:  call       0x180004330
+1800080bd:  nop        
+1800080be:  lea        r9,[rbp+0x90]
+1800080c5:  lea        r8,[rbp+0x70]
+1800080c9:  mov        rdx,rax
+1800080cc:  mov        rcx,rdi
+1800080cf:  call       0x18001d780
+1800080d4:  nop        
+1800080d5:  lea        rcx,[rbp-0x10]
+1800080d9:  call       0x180003f10
+1800080de:  nop        
+1800080df:  lea        rcx,[rbp+0x70]
+1800080e3:  call       0x180003f10
+1800080e8:  nop        
+1800080e9:  lea        rcx,[rbp+0x90]
+1800080f0:  call       0x180003f10
+1800080f5:  mov        rdx,rsi
+1800080f8:  mov        rcx,rdi
+1800080fb:  call       0x18001d850
+180008100:  lea        rdx,[rip+0x1b2e9]        # 0x1800233f0   ; "Param_Border_Transparent"
+180008107:  lea        rcx,[rbp+0x390]
+18000810e:  call       0x180004330
+180008113:  nop        
+180008114:  lea        rdx,[rip+0x1b305]        # 0x180023420   ; "Param_Border_Color"
+18000811b:  lea        rcx,[rbp+0x3b0]
+180008122:  call       0x180004330
+180008127:  nop        
+180008128:  lea        rdx,[rip+0x1b311]        # 0x180023440   ; "Param_Border_Mirror_Extend"
+18000812f:  lea        rcx,[rbp+0x3d0]
+180008136:  call       0x180004330
+18000813b:  nop        
+18000813c:  lea        rdx,[rip+0x1bc75]        # 0x180023db8   ; "Background mode"
+180008143:  lea        rcx,[rbp+0xb0]
+18000814a:  call       0x180003240
+18000814f:  nop        
+180008150:  lea        rdx,[rip+0x1b749]        # 0x1800238a0   ; "border_mode"
+180008157:  lea        rcx,[rbp+0x90]
+18000815e:  call       0x180003240
+180008163:  nop        
+180008164:  lea        rdx,[rip+0x1b25d]        # 0x1800233c8   ; "Param_BorderMode"
+18000816b:  lea        rcx,[rbp-0x10]
+18000816f:  call       0x180004330
+180008174:  nop        
+180008175:  mov        DWORD PTR [rsp+0x38],0x3
+18000817d:  lea        rcx,[rbp+0x390]
+180008184:  mov        QWORD PTR [rsp+0x30],rcx
+180008189:  mov        DWORD PTR [rsp+0x28],r13d
+18000818e:  mov        QWORD PTR [rsp+0x20],rdi
+180008193:  lea        r9,[rbp+0xb0]
+18000819a:  mov        r8,rax
+18000819d:  lea        rdx,[rbp+0x90]
+1800081a4:  mov        rcx,r14
+1800081a7:  call       0x180005a80
+1800081ac:  mov        rdx,rax
+1800081af:  mov        rcx,r15
+1800081b2:  call       0x18001bd00
+1800081b7:  nop        
+1800081b8:  lea        rcx,[rbp-0x10]
+1800081bc:  call       0x180003f10
+1800081c1:  nop        
+1800081c2:  lea        rcx,[rbp+0x90]
+1800081c9:  call       0x180003f10
+1800081ce:  nop        
+1800081cf:  lea        rcx,[rbp+0xb0]
+1800081d6:  call       0x180003f10
+1800081db:  lea        rdx,[rip+0x1b6ce]        # 0x1800238b0   ; "border_color"
+1800081e2:  lea        rcx,[rbp+0x190]
+1800081e9:  call       0x180003240
+1800081ee:  nop        
+1800081ef:  lea        rdx,[rbp+0x190]
+1800081f6:  mov        rcx,r14
+1800081f9:  call       0x18001c6b0
+1800081fe:  mov        rbx,rax
+180008201:  lea        rcx,[rbp+0x190]
+180008208:  call       0x180003f10
+18000820d:  lea        rdx,[rip+0x1b274]        # 0x180023488   ; "Border Color"
+180008214:  lea        rcx,[rbp+0x1b0]
+18000821b:  call       0x180003240
+180008220:  nop        
+180008221:  lea        rdx,[rip+0x1b260]        # 0x180023488   ; "Border Color"
+180008228:  lea        rcx,[rbp+0xb0]
+18000822f:  call       0x180003240
+180008234:  nop        
+180008235:  lea        rdx,[rip+0x1b234]        # 0x180023470   ; "Param_BorderColor"
+18000823c:  lea        rcx,[rbp-0x10]
+180008240:  call       0x180004330
+180008245:  nop        
+180008246:  lea        r9,[rbp+0x1b0]
+18000824d:  lea        r8,[rbp+0xb0]
+180008254:  mov        rdx,rax
+180008257:  mov        rcx,rbx
+18000825a:  call       0x18001d780
+18000825f:  nop        
+180008260:  lea        rcx,[rbp-0x10]
+180008264:  call       0x180003f10
+180008269:  nop        
+18000826a:  lea        rcx,[rbp+0xb0]
+180008271:  call       0x180003f10
+180008276:  nop        
+180008277:  lea        rcx,[rbp+0x1b0]
+18000827e:  call       0x180003f10
+180008283:  xorps      xmm3,xmm3
+180008286:  xorps      xmm2,xmm2
+180008289:  xorps      xmm1,xmm1
+18000828c:  mov        rcx,rbx
+18000828f:  call       0x18001ccc0
+180008294:  movaps     xmm6,XMMWORD PTR [rip+0x1bce5]        # 0x180023f80   ; data 0x3ff0000000000000 (d=1)
+18000829b:  movups     XMMWORD PTR [rsp+0x28],xmm6
+1800082a0:  movsd      QWORD PTR [rsp+0x20],xmm6
+1800082a6:  xorps      xmm3,xmm3
+1800082a9:  xorps      xmm2,xmm2
+1800082ac:  xorps      xmm1,xmm1
+1800082af:  mov        rcx,rbx
+1800082b2:  call       0x18001d930
+1800082b7:  movups     XMMWORD PTR [rsp+0x28],xmm6
+1800082bc:  movsd      QWORD PTR [rsp+0x20],xmm6
+1800082c2:  xorps      xmm3,xmm3
+1800082c5:  xorps      xmm2,xmm2
+1800082c8:  xorps      xmm1,xmm1
+1800082cb:  mov        rcx,rbx
+1800082ce:  call       0x18001cdf0
+1800082d3:  mov        rdx,rdi
+1800082d6:  mov        rcx,rbx
+1800082d9:  call       0x18001d850
+1800082de:  mov        rdx,rbx
+1800082e1:  mov        rcx,r15
+1800082e4:  call       0x18001bd00
+1800082e9:  lea        rdx,[rip+0x1bad8]        # 0x180023dc8   ; "OverlayColorParams"
+1800082f0:  lea        rcx,[rbp+0x1d0]
+1800082f7:  call       0x180003240
+1800082fc:  nop        
+1800082fd:  lea        rdx,[rbp+0x1d0]
+180008304:  mov        rcx,r14
+180008307:  call       0x18001c270
+18000830c:  mov        rdi,rax
+18000830f:  lea        rcx,[rbp+0x1d0]
+180008316:  call       0x180003f10
+18000831b:  lea        rdx,[rip+0x1ae36]        # 0x180023158   ; "Guide Lines"
+180008322:  lea        rcx,[rbp+0xd0]
+180008329:  call       0x180003240
+18000832e:  nop        
+18000832f:  lea        rdx,[rbp+0xd0]
+180008336:  mov        rcx,rdi
+180008339:  call       0x18001d6f0
+18000833e:  nop        
+18000833f:  lea        rcx,[rbp+0xd0]
+180008346:  call       0x180003f10
+18000834b:  lea        rdx,[rip+0x1ae06]        # 0x180023158   ; "Guide Lines"
+180008352:  lea        rcx,[rbp+0xf0]
+180008359:  call       0x180003240
+18000835e:  nop        
+18000835f:  lea        rdx,[rip+0x1adf2]        # 0x180023158   ; "Guide Lines"
+180008366:  lea        rcx,[rbp+0xd0]
+18000836d:  call       0x180003240
+180008372:  nop        
+180008373:  lea        rdx,[rip+0x1adc6]        # 0x180023140   ; "Group_OverlayColor"
+18000837a:  lea        rcx,[rbp-0x10]
+18000837e:  call       0x180004330
+180008383:  nop        
+180008384:  lea        r9,[rbp+0xf0]
+18000838b:  lea        r8,[rbp+0xd0]
+180008392:  mov        rdx,rax
+180008395:  mov        rcx,rdi
+180008398:  call       0x18001d780
+18000839d:  nop        
+18000839e:  lea        rcx,[rbp-0x10]
+1800083a2:  call       0x180003f10
+1800083a7:  nop        
+1800083a8:  lea        rcx,[rbp+0xd0]
+1800083af:  call       0x180003f10
+1800083b4:  nop        
+1800083b5:  lea        rcx,[rbp+0xf0]
+1800083bc:  call       0x180003f10
+1800083c1:  mov        rdx,rsi
+1800083c4:  mov        rcx,rdi
+1800083c7:  call       0x18001d850
+1800083cc:  lea        rdx,[rip+0x1ba0d]        # 0x180023de0   ; "overlay_color"
+1800083d3:  lea        rcx,[rbp+0x1f0]
+1800083da:  call       0x180003240
+1800083df:  nop        
+1800083e0:  lea        rdx,[rbp+0x1f0]
+1800083e7:  mov        rcx,r14
+1800083ea:  call       0x18001c6b0
+1800083ef:  mov        rbx,rax
+1800083f2:  lea        rcx,[rbp+0x1f0]
+1800083f9:  call       0x180003f10
+1800083fe:  lea        rdx,[rip+0x1b0ab]        # 0x1800234b0   ; "Guide Line Color"
